@@ -1,0 +1,23 @@
+<ckeditor [editor]="Editor"  [(ngModel)] ='val'></ckeditor>
+
+
+
+  <form (ngSubmit)="send()" [formGroup]="contactForm">
+            <br>
+    Select language:<select placeholder="select language" [formControl]="contactForm.controls['language']">              
+                    <option value="en">English</option>
+                    <option value="de">German</option>
+                    <option value="pl">Polish</option>
+                    <option value="zh">Chinese</option>
+                    <option value="es">Spanish</option>
+                     </select>
+                  <button type="submit"   >Submit</button>
+  </form>
+  <br>
+ Entered value is:
+ 
+ 
+ <h3 [innerHTML]="val"></h3>
+ 
+
+ 
